@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider Drift - Cloudinary Hackaton</title>
+  <meta name="google" content="notranslate">
+  <link rel="shortcut icon" href="resources/favicon.webp" type="image/x-icon">
+  <meta name="description" content="Project for Cloudinary Hackaton">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spider Drift">
+  <meta property="og:url" content="https://20essentials.github.io/project-000-152/">
+  <meta property="og:image" content="https://20essentials.github.io/project-000-152/assets/preview-page.jpg">
+  <meta property="og:description" content="Project for Cloudinary Hackaton">
+  <!-- Twitter Meta Tags -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Spider Drift">
+  <meta property="twitter:url" content="https://20essentials.github.io/project-000-152/">
+  <meta property="twitter:image" content="https://20essentials.github.io/project-000-152/assets/preview-page.jpg">
+  <meta property="twitter:description" content="Project for Cloudinary Hackaton">
+  <meta name="theme-color" content="#2969f1">
+  <script type="module" crossorigin src="index.min.js"></script>
+  <link rel="stylesheet" crossorigin href="index.min.css">
+</head>
+
+<body>
+  <aside class="message">
+    <h2>Be careful, this page may provoke you an epileptic attack.</h2>
+    <div class="right">
+      <img src="resources/chiwawa.avif" draggable="false" alt="chiwawa">
+    </div>
+  </aside>
+
+  <section class="container-floor">
+    <div class="floor">
+    </div>
+  </section>
+
+  <div class="container-letro-map">
+    <img src="resources/worn.webp" class="letrero-map" draggable="false" usemap="#letreroMap">
+    <map name="letreroMap">
+      <area shape="poly"
+        coords="67, 49, 216, 48, 217, 31, 248, 32, 247, 48, 363, 51, 436, 126, 365, 217, 251, 220, 251, 470, 223, 472, 217, 221, 67, 217"
+        href="javascript:void(0)" alt="worn" onclick="deleteWorn()">
+    </map>
+  </div>
+
+  <section class="sky-container">
+    <aside class="sky">
+      <article class="witch"></article>
+    </aside>
+  </section>
+
+  <div class="ground hidden-ground">
+    <div class="line"></div>
+  </div>
+
+  <script >
+    const $ = el => document.querySelector(el)
+    if (sessionStorage.getItem('cloudinary-introduction')) {
+      document.body.removeChild($('.message'))
+      document.body.removeChild($('.container-floor'))
+      document.body.removeChild($('.container-letro-map'))
+      $('.ground').classList.remove('hidden-ground');
+    }
+
+    // document.title = window.innerWidth + "x" + window.innerHeight;
+  </script>
+
+  <table class="statistics">
+    <tr>
+      <td class="left">Width <small>x</small> Height</td>
+      <td class="right current-photo-width">0</td>
+    </tr>
+  </table>
+
+  <div class="spider-container">
+    <aside class="spider-sprite spider-hidden"></aside>
+  </div>
+
+  <section class="information">
+    <article class="left">
+      <div class="dinousario">
+        <div class="container-dinousario">
+          <div class="pixel"></div>
+        </div>
+      </div>
+    </article>
+    <div class="right">
+      <aside class="slide slide-1"></aside>
+      <aside class="slide slide-2"></aside>
+      <aside class="slide slide-3"></aside>
+    </div>
+  </section>
+
+</body>
+
+</html>
